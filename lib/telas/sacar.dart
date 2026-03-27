@@ -1,10 +1,9 @@
-import 'package:financy_app/telas/sacar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:financy_app/app.dart';
 
-class Financy extends StatelessWidget {
-  const Financy({super.key});
+class Sacar extends StatelessWidget {
+  const Sacar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +61,7 @@ class Financy extends StatelessWidget {
                 children: [
                  
                   TextSpan(
-                    text: "Serviços\n",
+                    text: "Sacar\n",
                 style: GoogleFonts.montserrat(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                   TextSpan(
@@ -89,6 +88,7 @@ class Financy extends StatelessWidget {
 
          ),
         
+      
      
     SizedBox(
       width: 500,
@@ -98,17 +98,17 @@ class Financy extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color.fromARGB(255, 199, 198, 198),
+            backgroundColor: const Color.fromARGB(255, 255, 5, 5),
            padding:EdgeInsets.symmetric(vertical: 15, horizontal: 100),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
           ),
           child: Text(
-            "Consultar saldo",
+            "depositar",
             style: GoogleFonts.montserrat(
               fontSize: 15,
-              color: Colors.red,
+              color: const Color.fromARGB(255, 223, 223, 223),
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -117,39 +117,6 @@ class Financy extends StatelessWidget {
     ),
     ),
 
-    SizedBox(
-      width: 500,
-          child: Center(
-      child: Container(
-        margin: EdgeInsets.all(25),
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) =>Sacar() 
-              ),
-            );
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: const Color.fromARGB(255, 199, 198, 198),
-           padding:EdgeInsets.symmetric(vertical: 15, horizontal: 90),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-          ),
-          child: Text(
-            "depositar dinheiro",
-            style: GoogleFonts.montserrat(
-              fontSize: 15,
-              color: Colors.red,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ),
-    ),
-    ),
     SizedBox(
       width: 500,
           child: Center(
@@ -165,7 +132,7 @@ class Financy extends StatelessWidget {
             ),
           ),
           child: Text(
-            "sacar dinheiro",
+            "voltar",
             style: GoogleFonts.montserrat(
               fontSize: 15,
               color: Colors.red,
